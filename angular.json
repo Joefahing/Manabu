@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "Manabu"
+  "cli": {
+    "analytics": false
+  }
 }
