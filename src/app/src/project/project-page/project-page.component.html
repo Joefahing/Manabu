@@ -1,11 +1,33 @@
 <div>
     <h2>Project</h2>
 </div>
-
 <div>
     <div fxLayout="row" class="project-header">
         <h4>Projects</h4>
-        <button mat-button>+ new</button>
+        <button mat-flat-button color="primary">+ new</button>
     </div>
     <div class="divider"></div>
 </div>
+<div>
+    <mat-list>
+        <mat-list-item>
+            <mat-icon matListItemIcon>article</mat-icon>
+            <div matListItemTitle>Learn How to learn</div>
+            <div matListItemLine>tag1</div>
+            <div matListItemLine>tag2</div>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item>
+            <mat-icon matListItemIcon>article</mat-icon>
+            <div>Physcis</div>
+            <div>
+                <div class="tag">tag 3</div>
+            </div>
+            <button mat-flat-button color="primary">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-list>
+</div>
+

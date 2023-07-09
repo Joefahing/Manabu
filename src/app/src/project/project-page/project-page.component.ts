@@ -10,6 +10,7 @@ export class ProjectPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
