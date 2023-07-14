@@ -9,10 +9,12 @@ $primary-color: #F1F1F3
 mat-list-item
     height: auto !important 
 
+    &:not(:first-child)
+        margin-top: 12px
+
 mat-chip
     height: 20px
     background-color: $primary-color !important
-
 
 .project-page
     width: 800px
@@ -52,11 +54,18 @@ mat-chip
             .mat-icon
                 transform: scale(1.2)
                 
-        .project-item-content
+        .project-item-title
             display: flex
             flex-direction: column
-            grid-column: 2 / 11
-            grid-row: 1 / 2
+            justify-content: center
+
+            &.single-row     
+                grid-column: 2 / 11
+                grid-row: 1 / 2
+
+            &.double-row
+                grid-column: 2 / 11
+                grid-row: 1 / 3
 
         .project-item-tag
             grid-column: 2 / 11
