@@ -1,4 +1,6 @@
 $primary-color: #F1F1F3
+$primary-color-darker: #DADADA
+$secondary-color: #000000
     
 :host
     width: 100%
@@ -8,6 +10,12 @@ $primary-color: #F1F1F3
 
 mat-list-item
     height: auto !important 
+    border-radius: 6px
+    padding-top: 6px
+    padding-block: 6px
+
+    &:hover
+        background-color: $primary-color
 
     &:not(:first-child)
         margin-top: 12px
@@ -29,6 +37,7 @@ mat-chip
         display: flex 
         flex-direction: row
         justify-content: space-between
+        align-items: center
         margin-bottom: 10px
 
         .project-title
@@ -88,4 +97,4 @@ mat-chip
                 border-radius: 6px
 
             .icon-container:hover
-                background-color: $primary-color
+                background-color: $primary-color-darker

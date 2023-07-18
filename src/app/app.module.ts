@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { ProjectPageComponent } from '../project/project-page/project-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../share/material-module';
+import { StopClickPropagationDirective } from '../share/stop-click-propagation.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectPageComponent  
+    ProjectPageComponent,
+    StopClickPropagationDirective  
   ],
   imports: [
     BrowserModule,
