@@ -1,0 +1,38 @@
+<div class="project-page">
+    <h2 class="page-title">Project</h2>
+    <div>
+        <div class="project-header">
+            <div class="project-title">Projects</div>
+            <button id="new-project" mat-flat-button (click)="onNewProjectClick()">+ new</button>
+        </div>
+        <mat-divider></mat-divider>
+    </div>
+    <div>
+        <mat-list>
+            <mat-list-item 
+                *ngFor="let project of projects;"
+                (click)="onProjectClick(project)">
+                <div class="project-item-container">
+                    <div class="project-item-icon">
+                        <mat-icon>{{ project.icon }}</mat-icon>
+                    </div>
+                    <div class="project-item-title" 
+                        [ngClass]="project.tags.length > 0 ? 'single-row' : 'double-row'">
+                        {{ project.name }}
+                    </div>
+                    <div *ngIf="project.tags.length > 0" 
+                        class="project-item-tag">
+                        <mat-chip-set>
+                            <mat-chip *ngFor="let tag of project.tags">{{ tag.name }}</mat-chip>
+                        </mat-chip-set>
+                    </div>
+                    <div class="project-item-setting" (click)="onProjectSettingClick()">
+                        <div class="icon-container">
+                            <mat-icon>more_vert</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>
