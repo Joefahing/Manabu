@@ -3,7 +3,7 @@ import {
   HostBinding,
   OnInit
 }
-  from '@angular/core';
+from '@angular/core';
 import { Project } from 'src/share/types';
 import { ProjectService } from '../project.service';
 
@@ -18,7 +18,6 @@ export class ProjectPageComponent implements OnInit
   public projects: Project[] = [];
   // To be cleanup: since I'm the only
   private userID: string = '1';
-  //private projectService: ProjectService
 
   constructor(
     private projectService: ProjectService
