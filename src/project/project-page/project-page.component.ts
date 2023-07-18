@@ -1,6 +1,5 @@
 import {
   Component,
-  HostBinding,
   OnInit
 }
 from '@angular/core';
@@ -38,12 +37,12 @@ export class ProjectPageComponent implements OnInit
   public onProjectClick(project: Project): void {
     
     // To be implement: will add function to navigate to individual project page later 
-    console.log(project);
+    console.log(`project with name ${project.name} is clicked`);
   }
 
-  public onProjectSettingClick(): void 
+  public onProjectSettingClick(event: Event): void 
   {
-
+    console.log('project setting is click');
   }
 }
 

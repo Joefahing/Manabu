@@ -1,12 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProjectPageComponent } from './project-page.component';
-import { MatIconModule } from "@angular/material/icon";
-import { MaterialModule } from 'src/share/material-module';
-import { MatListModule } from '@angular/material/list';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { Project } from 'src/share/types';
-
+import { MaterialModule } from 'src/share/material-module';
 
 describe('ProjectPageComponent', () => {
   let component: ProjectPageComponent;
@@ -16,8 +13,7 @@ describe('ProjectPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        MatIconModule,
-        MatListModule
+        MaterialModule
       ],
       declarations: [ ProjectPageComponent ]
     })

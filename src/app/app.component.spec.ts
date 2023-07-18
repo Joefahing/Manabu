@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { ProjectPageComponent } from 'src/project/project-page/project-page.component';
+import { MaterialModule } from 'src/share/material-module';
 
 describe('AppComponent', () => {
   
@@ -13,7 +14,8 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule(
     {
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MaterialModule
       ],
       declarations: [
         ProjectPageComponent,
