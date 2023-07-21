@@ -35,6 +35,7 @@ $light-primary: mat.define-palette($black-and-white-palette, 300, 100, 300, 900)
 $light-accent: mat.define-palette($black-and-white-palette, 100, 300, 900);
 
 /* Typography */
+/* Reference https://m2.material.io/design/typography/the-type-system.html#type-scale */
 $typography-config: mat.define-typography-config(
     $headline-1: mat.define-typography-level(
         $font-family: 'Montserrat',
