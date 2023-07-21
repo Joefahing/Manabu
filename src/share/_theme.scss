@@ -1,6 +1,7 @@
 @use "@angular/material" as mat;
 @use "../project/project-page/project-page-theme" as project-page-component;
 
+/* Color */
 $black-and-white-palette: 
 ( 
     0: #FFFFFF,
@@ -11,9 +12,9 @@ $black-and-white-palette:
     400: #B5B5B5,
     500: #959595,
     600: #6D6D6D,
-    700: #595959,
-    800: #3B3B3B,
-    900: #1B1B1B,
+    700: #494949,
+    800: #2B2B2B,
+    900: #121212,
     contrast: 
     (
         0: #000000,
@@ -32,11 +33,95 @@ $black-and-white-palette:
 
 $light-primary: mat.define-palette($black-and-white-palette, 300, 100, 300, 900);
 $light-accent: mat.define-palette($black-and-white-palette, 100, 300, 900);
+
+/* Typography */
+$typography-config: mat.define-typography-config(
+    $headline-1: mat.define-typography-level(
+        $font-family: 'Montserrat',
+        $font-size: 97px,
+        $line-height: 1,
+        $letter-spacing: -1.5,
+      ),
+      $headline-2: mat.define-typography-level(
+        $font-family: 'Montserrat',
+        $font-size: 61px,
+        $line-height: 1,
+        $letter-spacing: -0.5,
+      ),
+      $headline-3: mat.define-typography-level(
+        $font-family: 'Montserrat',
+        $font-size: 48px,
+        $line-height: 1,
+        $letter-spacing: 0,
+      ),
+      $headline-4: mat.define-typography-level(
+        $font-family: 'Montserrat',
+        $font-size: 34px,
+        $line-height: 1,
+        $letter-spacing: 0.25,
+      ),
+      $headline-5: mat.define-typography-level(
+        $font-family: 'Montserrat',
+        $font-size: 24px,
+        $line-height: 1,
+        $letter-spacing: 0,
+      ),
+      $headline-6: mat.define-typography-level(
+        $font-family: 'Montserrat',
+        $font-size: 20px,
+        $line-height: 1,
+        $letter-spacing: 0.15,
+      ),
+      $body-1: mat.define-typography-level(
+        $font-family: 'Open Sans',
+        $font-size: 16px,
+        $line-height: 1,
+        $letter-spacing: 0.15,
+      ),
+      $body-2: mat.define-typography-level(
+        $font-family: 'Open Sans',
+        $font-size: 14px,
+        $line-height: 1,
+        $letter-spacing: 0.1,
+      ),
+      $subtitle-1: mat.define-typography-level(
+        $font-family: 'Montserrat',
+        $font-size: 16,
+        $line-height: 1,
+        $letter-spacing: 0.5,
+      ),
+      $subtitle-2: mat.define-typography-level(
+        $font-family: 'Montserrat',
+        $font-size: 14px,
+        $line-height: 1,
+        $letter-spacing: 0.5,
+      ),
+      $button: mat.define-typography-level(
+        $font-family: 'Open Sans',
+        $font-size: 14px,
+        $line-height: 1,
+        $letter-spacing: 0.15,
+      ),
+      $overline: mat.define-typography-level(
+        $font-family: 'Open Sans',
+        $font-size: 10px,
+        $line-height: 1,
+        $letter-spacing: 1.5,
+      ),
+      $caption: mat.define-typography-level(
+        $font-family: 'Open Sans',
+        $font-size: 12px,
+        $line-height: 1,
+        $letter-spacing: 0.4,
+      )
+);
+
 $light-theme: mat.define-light-theme((
     color: (
         primary: $light-primary,
         accent: $light-accent
     ),
+    typography: $typography-config,
     desnity: 0
 ));
 
