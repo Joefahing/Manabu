@@ -2,8 +2,11 @@
     <h2 class="page-title">Project</h2>
     <div>
         <div class="project-header">
-            <div class="project-title">Projects</div>
-            <button id="new-project" mat-flat-button>
+            <h2 class="project-title">Projects</h2>
+            <button id="new-project" 
+                color="primary" 
+                mat-flat-button
+                (click)="onNewProjectClick()">
                 <mat-icon>add</mat-icon>
                 <span>NEW</span>
             </button>
@@ -26,8 +29,11 @@
                     </div>
                     <div *ngIf="project.tags.length > 0" 
                         class="project-item-tag">
-                        <mat-chip-set>
-                            <mat-chip *ngFor="let tag of project.tags">{{ tag.name }}</mat-chip>
+                        <mat-chip-set
+                            color="primary">
+                            <mat-chip 
+                                *ngFor="let tag of project.tags"
+                                color="primary">{{ tag.name }}</mat-chip>
                         </mat-chip-set>
                     </div>
                     <div class="project-item-setting" 
